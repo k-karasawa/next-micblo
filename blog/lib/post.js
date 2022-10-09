@@ -29,7 +29,7 @@ export function getPostsDate() {
 
 //getStaticPathでreturnで使うpathを取得する
 export function getAllPostIds() {
-    const filNames = fs.readdirSync(postsDirectory);
+    const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map((fileName) => {
         return {
             params: {
@@ -42,7 +42,7 @@ export function getAllPostIds() {
 //idに基づいてブログ投稿データを返す
 export async function getPostData(id) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
-    const fileContent = fs.readFileSync(fullPath, "utff8");
+    const fileContent = fs.readFileSync(fullPath, "utf8");
 
     const matterResult = matter(fileContent);
 
