@@ -6,6 +6,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./:/usr/src/app
-    command: sh -c "cd blog && npm run build"
+    #command: sh -c "cd blog && npm run build"
     ports:
       - "3000:3000"

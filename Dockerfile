@@ -4,3 +4,6 @@ WORKDIR /usr/src/app
 
 USER node
 #RUN npm install -g npm@latest && npm install create-next-app
+
+CMD ["npm run build"]
+CMD ["npm run start"]
